@@ -10,4 +10,4 @@ class Main extends Component {
   }
 }
 
-export default Header;
+export default Main;

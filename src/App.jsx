@@ -45,9 +45,9 @@
 // Always begin with a captial letter
 
 import React, { Component } from "react";
-import Header from "./components/Header.jsx";
-import Main from "./components/Main.jsx";
-// import Footer from "./components/Footer.jsx";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer.jsx";
 
 // create jsx files within the components folder with the component name. Then import them into App file.
 // For the demo I've only completed one. Header.
@@ -58,7 +58,7 @@ class App extends Component {
       <div>
         {"hello "}
         <Header />
-        ``
+
         <Main />
         <Footer />
       </div>
@@ -69,3 +69,5 @@ class App extends Component {
 // Each component should only do one thing
 
 // There are Stateless and Stateful components
+
+export default App;
