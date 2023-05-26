@@ -47,7 +47,8 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
 import Main from "./components/Main";
-import Footer from "./components/Footer.jsx";
+import Footer from "./components/Footer";
+import Button from "./components/Button";
 
 // create jsx files within the components folder with the component name. Then import them into App file.
 // For the demo I've only completed one. Header.
@@ -58,9 +59,11 @@ class App extends Component {
       <div>
         {"hello "}
         <Header />
-
         <Main />
         <Footer />
+        <Button name={"Button 1"} />
+        {/* this name (data) is now being sent into the Button component */}
+        <Button name={"Button 2"} />
       </div>
     );
   }
