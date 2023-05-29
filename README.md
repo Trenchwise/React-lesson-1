@@ -70,6 +70,52 @@ When the button is clicked (Which is set in the Button component)
         <button onClick={this.onToggle}>Toggle</button>
         <p onClick={this.onAdd}>{this.state.count}</p>
 
-It adds one to the count, it reruns the render method, which roduced new HTML, which React then goes an puts inside the DOM
+setState
+
+Whenver you change the data in your programme - you will need to use setState. This will tell react that you want to change the data.
+
+It adds one to the count, it reruns the render method, which produced new HTML, which React then goes an puts inside the DOM
 
 BUT if you add one inside the render method, it will update the state - this can cause an infinite loop.
+
+setState is async.
+
+If you want to see the the answer/data of set.State then you need to console log in the render method once the state has been updates
+
+Recap -
+
+- We can make components
+- We can make then share data
+- We can update state inside those components
+
+Time stamp 1.44
+
+Component LifeCycle \* = ones to know
+
+    Birth -
+    Constructor
+    Render *** v import every component has it
+    componentDidMount() ** components often have it
+
+    Life -
+    componentWillRecieveProps()
+    shouldComponentUpdate()
+    componentDidUpdat () ** common one to understan
+
+    Death -
+    componentWillUnmount()** this code will run when component is about to die. Could use this to kill a timer so it doesn't run forever. Store things to disk
+
+Time stamp 2.10
+
+Styling in React 2.16
+
+You can implement styles conditionally. See below or line 101 in App
+
+ <h1 style={{ backgroundColor: this.state.happy ? "blue" : "red" }}>
+          Hello world!
+        </h1>
+
+Anything in the render method can be configuered based on what is in the state.
+
+Can also use className to change styling
+Can also use MyComponent to change styling

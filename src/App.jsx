@@ -85,7 +85,7 @@ class App extends Component {
   state = { count: 0, happy: false };
 
   onAdd = () => {
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ count: this.state.count + 1 }); //This is async
   };
 
   onToggle = () => {
@@ -98,6 +98,9 @@ class App extends Component {
         <p onClick={this.onAdd}>{this.state.count}</p>
         <button onClick={this.onToggle}>Toggle</button>
         <IsHappy happy={this.state.happy} />
+        <h1 style={{ backgroundColor: this.state.happy ? "blue" : "red" }}>
+          Hello world!
+        </h1>
       </>
     );
   }
