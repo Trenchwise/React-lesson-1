@@ -49,28 +49,58 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import Button from "./components/Button";
+import isHappy from "./components/IsHappy";
+import IsHappy from "./components/IsHappy";
 
 // create jsx files within the components folder with the component name. Then import them into App file.
 // For the demo I've only completed one. Header.
 
+////////
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         {"hello "}
+//         <Header />
+//         <Main />
+//         <Footer />
+//         <Button name={"Button 1"} />
+//         {/* this name (data) is now being sent into the Button component */}
+//         <Button name={"Button 2"} />
+//       </div>
+//     );
+//   }
+// }
+
+// // Each component should only do one thing
+
+// // There are Stateless and Stateful components
+
+// export default App;
+
+//////
+
 class App extends Component {
+  state = { count: 0, happy: false };
+
+  onAdd = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  onToggle = () => {
+    this.setState({ happy: !this.setState.happy });
+  };
+
   render() {
     return (
-      <div>
-        {"hello "}
-        <Header />
-        <Main />
-        <Footer />
-        <Button name={"Button 1"} />
-        {/* this name (data) is now being sent into the Button component */}
-        <Button name={"Button 2"} />
-      </div>
+      <>
+        <p onClick={this.onAdd}>{this.state.count}</p>
+        <button onClick={this.onToggle}>Toggle</button>
+        <IsHappy happy={this.state.happy} />
+      </>
     );
   }
 }
-
-// Each component should only do one thing
-
-// There are Stateless and Stateful components
 
 export default App;
